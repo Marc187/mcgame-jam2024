@@ -56,10 +56,23 @@ public class PlayerStats : MonoBehaviour
         float newHealth = currentHealth -= amount;
         if (newHealth <= 0)
         {
-            //game over
+            HandleDeath();
         }
         healthBar.SetHealth(newHealth);
         Debug.Log("Player health decreased to: " + currentHealth);
+    }
+
+    // Death Section 
+    private void HandleDeath()
+    {
+        // Perform any additional actions upon player death, such as playing an animation, showing a game over screen, etc.
+
+        // Call the death handling logic from the PlayerDeath script
+        PlayerDeath playerDeathScript = GetComponent<PlayerDeath>();
+        if (playerDeathScript != null)
+        {
+            playerDeathScript.HandlePlayerDeath();
+        }
     }
 
 }
