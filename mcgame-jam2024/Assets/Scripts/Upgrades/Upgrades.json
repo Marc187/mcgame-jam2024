@@ -1,0 +1,85 @@
+{
+  "upgrades": [
+    {
+      "title": "Health Boost I",
+      "description": "Increase maximum health",
+      "effect": {
+        "type": "body",
+        "statName": "health",
+        "value": 10
+      }
+    },
+    {
+      "title": "Health Boost II",
+      "description": "Increase maximum health",
+      "effect": {
+        "type": "body",
+        "statName": "health",
+        "value": 20
+      }
+    },
+    {
+      "title": "Health Boost III",
+      "description": "Increase maximum health",
+      "effect": {
+        "type": "body",
+        "statName": "health",
+        "value": 30
+      }
+    },
+    {
+      "title": "Speed Boost I",
+      "description": "Increase movement speed",
+      "effect": {
+        "type": "body",
+        "statName": "speed",
+        "value": 1
+      }
+    },
+    {
+      "title": "Speed Boost II",
+      "description": "Increase movement speed",
+      "effect": {
+        "type": "body",
+        "statName": "speed",
+        "value": 2
+      }
+    },
+    {
+      "title": "Speed Boost III",
+      "description": "Increase movement speed",
+      "effect": {
+        "type": "body",
+        "statName": "speed",
+        "value": 3
+      }
+    },
+    {
+      "title": "Damage Boost I",
+      "description": "Increase damage",
+      "effect": {
+        "type": "gun",
+        "statName": "damage",
+        "value": 2
+      }
+    },
+    {
+      "title": "Damage Boost II",
+      "description": "Increase damage",
+      "effect": {
+        "type": "gun",
+        "statName": "damage",
+        "value": 4
+      }
+    },
+    {
+      "title": "Damage Boost III",
+      "description": "Increase damage",
+      "effect": {
+        "type": "gun",
+        "statName": "damage",
+        "value": 6
+      }
+    }
+  ]
+}
