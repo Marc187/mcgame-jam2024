@@ -15,7 +15,11 @@ public class ControleurPersonnage : MonoBehaviour
     private float vDeplacement;                 // le déplacement à appliquer au personnage selon les touches
     
     Rigidbody rigidbodyPerso;                   //Référence au Rigidbody du personnage
-    Animator animPerso; 
+    Animator animPerso;
+
+    public Camera playerCamera;
+    public float originalFOV;
+    public float runningFOV;  // Adjust as needed
 
     //Mettre en mémoire la réference au Rigidbody 
     void Start()
@@ -88,10 +92,12 @@ float directionAvantArrierre;
         if(Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
         {
             vDeplacement = Input.GetAxis("Vertical") * vitesseCourse;
+            playerCamera.fieldOfView = Mathf.Lerp(playerCamera.fieldOfView, runningFOV, Time.deltaTime * 2);
         }
         else
         {
             vDeplacement = Input.GetAxis("Vertical") * vitesseMarche;
+            playerCamera.fieldOfView = Mathf.Lerp(playerCamera.fieldOfView, originalFOV, Time.deltaTime * 2);
         }
         
         
@@ -129,4 +135,4 @@ void AnimerPersonnage()
             transform.parent = null;
         }
     }
-} //Physics.SphereCast(transform.position + (Vector3.up * 0.5f), rayonDetectePlancher, Vector3.down, out hitInfo, distanceSol)
+}
