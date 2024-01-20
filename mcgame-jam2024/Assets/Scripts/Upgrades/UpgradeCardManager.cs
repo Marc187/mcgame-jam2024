@@ -3,7 +3,7 @@ using UnityEngine;
 public class UpgradeCardManager : MonoBehaviour
 {
     public UpgradeCard[] upgradeCards;
-    // public PlayerStats playerStats;
+    public PlayerStats playerStats;
     public GameObject upgradePanel; // Reference to the panel containing the upgrade cards
     public TextAsset jsonFile;
 
@@ -35,10 +35,13 @@ public class UpgradeCardManager : MonoBehaviour
         switch (upgrade.effect.statName)
         {
             case "health":
-                // playerStats.IncreaseHealth(upgrade.effect.value);
+                playerStats.IncreaseMaxHealth(upgrade.effect.value);
                 break;
             case "speed":
-                // playerStats.IncreaseSpeed(upgrade.effect.value);
+                playerStats.IncreaseSpeed(upgrade.effect.value);
+                break;
+            case "damage":
+                playerStats.IncreaseDamage(upgrade.effect.value);
                 break;
         }
     }

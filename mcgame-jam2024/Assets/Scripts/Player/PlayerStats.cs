@@ -1,18 +1,65 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float initialSpeed = 5f;
+    private float currentSpeed;
+    private float maxSpeed = 10f;
+
+    public float initialHealth = 100f;
+    private float currentHealth;
+    private float maxHealth;
+
+    public float initialDamage = 10f;
+    private float currentDamage;
+
+    public HealthBar healthBar;
+
+    private void Start()
     {
-        
+        // Initialize stats
+        currentSpeed = initialSpeed;
+        currentHealth = initialHealth;
+        currentDamage = initialDamage;
+        maxHealth = initialHealth;
+        healthBar.SetMaxHealth(currentHealth);
+        healthBar.SetInitialHealth(currentHealth);
     }
 
-    // Update is called once per frame
-    void Update()
+    // Increase Section
+    public void IncreaseSpeed(float amount)
     {
-        
+        float newSpeed = currentSpeed += amount;
+        if (newSpeed < maxSpeed )
+        {
+            currentSpeed += amount;
+            Debug.Log("Player speed increased to: " + currentSpeed);
+        }
     }
+
+    public void IncreaseMaxHealth(float amount)
+    {
+        maxHealth += amount;
+        healthBar.SetMaxHealth(maxHealth);
+        Debug.Log("Player max health increased to: " + maxHealth);
+    }
+
+    public void IncreaseDamage(float amount)
+    {
+        currentDamage += amount;
+        Debug.Log("Player damage increased to: " + currentDamage);
+    }
+
+    // Decrease Section
+    public void DecreaseHealth(float amount)
+    {
+        float newHealth = currentHealth -= amount;
+        if (newHealth <= 0)
+        {
+            //game over
+        }
+        healthBar.SetHealth(newHealth);
+        Debug.Log("Player health decreased to: " + currentHealth);
+    }
+
 }

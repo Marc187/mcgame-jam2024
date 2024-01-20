@@ -17,6 +17,15 @@
         "statName": "speed",
         "value": 2.5
       }
+    },
+    {
+      "title": "Damage Boost",
+      "description": "Increase damage",
+      "effect": {
+        "type": "gun",
+        "statName": "damage",
+        "value": 2.5
+      }
     }
   ]
 }
