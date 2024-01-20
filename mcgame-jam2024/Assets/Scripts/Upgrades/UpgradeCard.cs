@@ -7,9 +7,14 @@ public class UpgradeCard : MonoBehaviour
 {
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI descriptionText;
+    public Image cardImage;
 
     private Upgrade currentUpgrade;
     public UnityEvent<Upgrade> onCardClicked;
+
+    public Sprite bodyImage;
+    public Sprite gunImage;
+    public Sprite customImage;
 
     // Attach this method to the button click event in the Unity Editor
     public void OnButtonClick()
@@ -25,5 +30,17 @@ public class UpgradeCard : MonoBehaviour
         currentUpgrade = upgrade;
         titleText.text = upgrade.title;
         descriptionText.text = upgrade.description;
+        switch (upgrade.effect.type)
+        {
+            case "body":
+                cardImage.sprite = bodyImage;
+                break;
+            case "gun":
+                cardImage.sprite = gunImage;
+                break;
+            case "custom":
+                cardImage.sprite = customImage;
+                break;
+        }
     }
 }

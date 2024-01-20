@@ -2,6 +2,6 @@
 public class UpgradeEffect
 {
     public string type;
-    public string statType;
+    public string statName;
     public float value;
 }

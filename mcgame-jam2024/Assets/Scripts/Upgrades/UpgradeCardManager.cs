@@ -32,7 +32,7 @@ public class UpgradeCardManager : MonoBehaviour
 
     private void ApplyStatUpgrade(Upgrade upgrade)
     {
-        switch (upgrade.effect.statType)
+        switch (upgrade.effect.statName)
         {
             case "health":
                 // playerStats.IncreaseHealth(upgrade.effect.value);
