@@ -4,7 +4,7 @@ public class PlayerStats : MonoBehaviour
 {
     public float initialSpeed = 5f;
     private float currentSpeed;
-    private float maxSpeed = 10f;
+    private float maxSpeed = 50f;
 
     public float initialHealth = 100f;
     private float currentHealth;
