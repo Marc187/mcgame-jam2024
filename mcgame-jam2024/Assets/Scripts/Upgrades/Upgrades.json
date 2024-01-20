@@ -1,0 +1,22 @@
+{
+  "upgrades": [
+    {
+      "title": "Health Boost",
+      "description": "Increase maximum health",
+      "effect": {
+        "type": "stat",
+        "statType": "health",
+        "value": 20
+      }
+    },
+    {
+      "title": "Speed Boost",
+      "description": "Increase movement speed",
+      "effect": {
+        "type": "stat",
+        "statType": "speed",
+        "value": 2.5
+      }
+    }
+  ]
+}
