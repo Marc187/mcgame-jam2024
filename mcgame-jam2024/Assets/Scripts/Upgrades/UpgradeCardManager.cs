@@ -41,7 +41,14 @@ public class UpgradeCardManager : MonoBehaviour
         switch (upgrade.effect.statName)
         {
             case "health":
-                playerStats.IncreaseMaxHealth(upgrade.effect.value);
+                if (upgrade.effect.type == "custom")
+                {
+
+                }
+                else
+                {
+                    playerStats.IncreaseMaxHealth(upgrade.effect.value);
+                }
                 break;
             case "speed":
                 playerStats.IncreaseSpeed(upgrade.effect.value);

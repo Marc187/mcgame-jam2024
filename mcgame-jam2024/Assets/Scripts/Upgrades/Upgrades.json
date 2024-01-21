@@ -80,6 +80,33 @@
         "statName": "damage",
         "value": 6
       }
+    },
+    {
+      "title": "Healing I",
+      "description": "Heal",
+      "effect": {
+        "type": "custom",
+        "statName": "health",
+        "value": 10
+      }
+    },
+    {
+      "title": "Healing II",
+      "description": "Heal",
+      "effect": {
+        "type": "custom",
+        "statName": "health",
+        "value": 20
+      }
+    },
+    {
+      "title": "Healing III",
+      "description": "Heal",
+      "effect": {
+        "type": "custom",
+        "statName": "health",
+        "value": 30
+      }
     }
   ]
 }
