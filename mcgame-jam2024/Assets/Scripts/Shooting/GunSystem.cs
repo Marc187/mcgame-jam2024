@@ -3,7 +3,6 @@ using TMPro;
 
 public class GunSystem : MonoBehaviour
 {
-    
     public int damage;
     public float timeBetweenShooting, spread, range, reloadTime, timeBetweenShots;
     public int magazineSize, bulletsPerTap;
@@ -24,11 +23,6 @@ public class GunSystem : MonoBehaviour
     public CameraShake camShake;
     public float camShakeMagnitude, camShakeDuration;
     public TextMeshProUGUI text;
-
-    public AudioSource shootSound;
-    public AudioSource reloadSound;
-
-    //public Animation anim;
 
     private void Awake()
     {
@@ -57,9 +51,6 @@ public class GunSystem : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading)
         {
-            var sound = Instantiate(reloadSound);
-            reloadSound.Play();
-            //anim.Play();
             Reload();
         }
 
@@ -95,10 +86,6 @@ public class GunSystem : MonoBehaviour
 
         // Camera Shake
         //StartCoroutine(camShake.Shake(camShakeDuration, camShakeMagnitude));
-        var sound = Instantiate(shootSound);
-        sound.enabled = true;
-        sound.Play();
-        Destroy(sound.gameObject, sound.clip.length);
 
         // Graphics
         Instantiate(muzzleFlash, rayHit.point, Quaternion.Euler(0, 180, 0));

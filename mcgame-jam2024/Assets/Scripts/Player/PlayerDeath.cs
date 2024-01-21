@@ -6,15 +6,12 @@ public class PlayerDeath : MonoBehaviour
 
     public void HandlePlayerDeath()
     {
-        ReloadCurrentScene();
+        LoadDeathScreen();
     }
 
-    private void ReloadCurrentScene()
+    private void LoadDeathScreen()
     {
-        // Get the current scene index
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-
-        // Reload the current scene
-        SceneManager.LoadScene(currentSceneIndex);
+        Cursor.visible = true;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
