@@ -24,8 +24,12 @@ public class GunSystem : MonoBehaviour
     public float camShakeMagnitude, camShakeDuration;
     public TextMeshProUGUI text;
 
+
     public AudioSource shootSound;
     public AudioSource reloadSound;
+
+
+    public GameObject bulletPrefab;
 
     private void Awake()
     {
@@ -76,16 +80,25 @@ public class GunSystem : MonoBehaviour
         // Calculate Direction with spread 
         Vector3 direction = fpsCam.transform.forward + new Vector3(x, y, 0);
 
-        // Raycast
-        if (Physics.Raycast(fpsCam.transform.position, direction, out rayHit, range, whatIsEnemy))
-        {
-            Debug.Log(rayHit.collider.name);
+        //Debug.DrawRay(fpsCam.transform.position, direction * range, Color.red, 2.0f);
+        //// Raycast
+        //if (Physics.Raycast(fpsCam.transform.position, direction, out rayHit, range, whatIsEnemy))
+        //{
+        //    Debug.Log("Hello cunt");
 
-            if (rayHit.collider.CompareTag("Enemy"))
-            {
-                rayHit.collider.GetComponent<Enemy>().TakeDamage(damage);
-            }
-        }
+        //    if (rayHit.collider.tag == "Enemy")
+        //    {
+        //        var enemyHit = rayHit.collider.GetComponent<SC_NPCEnemy>();
+        //        enemyHit.ApplyDamage((float)damage);
+        //        Debug.Log(enemyHit.npcHP);
+        //    }
+        //}
+
+        GameObject bullet = Instantiate(bulletPrefab, attackPoint.position, Quaternion.identity) as GameObject;
+        var bulletScript = bullet.GetComponent<Bullet>();
+        bulletScript.direction = direction;
+
+
 
         // Camera Shake
         //StartCoroutine(camShake.Shake(camShakeDuration, camShakeMagnitude));
