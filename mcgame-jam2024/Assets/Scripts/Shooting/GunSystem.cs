@@ -90,7 +90,9 @@ public class GunSystem : MonoBehaviour
         // Camera Shake
         //StartCoroutine(camShake.Shake(camShakeDuration, camShakeMagnitude));
         var sound = Instantiate(shootSound);
+        sound.enabled = true;
         sound.Play();
+        Destroy(sound.gameObject, sound.clip.length);
 
         // Graphics
         Instantiate(muzzleFlash, rayHit.point, Quaternion.Euler(0, 180, 0));
