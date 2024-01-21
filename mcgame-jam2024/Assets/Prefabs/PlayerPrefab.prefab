@@ -142,8 +142,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e8f82006a5fac540a77b304dc528126, type: 2}
+  m_sharedMaterial: {fileID: 1165294643073746134, guid: 2e8f82006a5fac540a77b304dc528126, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -167,8 +167,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -871,6 +871,7 @@ MonoBehaviour:
   camShakeMagnitude: 0.1
   camShakeDuration: 0.1
   text: {fileID: 8043484464541994512}
+  shootSound: {fileID: 0}
 --- !u!1001 &4070874882397875695
 PrefabInstance:
   m_ObjectHideFlags: 0
