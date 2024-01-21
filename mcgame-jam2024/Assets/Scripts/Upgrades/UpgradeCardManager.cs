@@ -7,9 +7,6 @@ public class UpgradeCardManager : MonoBehaviour
     public GameObject upgradePanel; // Reference to the panel containing the upgrade cards
     public TextAsset jsonFile;
 
-    public ScriptCameraFPS scriptCameraFPS;
-    public GameObject player;
-
     // Call this method to show the upgrade panel and randomize upgrades
     public void ShowUpgradePanel()
     {
@@ -31,9 +28,6 @@ public class UpgradeCardManager : MonoBehaviour
         ApplyStatUpgrade(upgrade);
         upgradePanel.SetActive(false);
         Cursor.visible = false;
-        Time.timeScale = 1;
-        scriptCameraFPS.enabled = true;
-        player.SetActive(true);
     }
 
     private void ApplyStatUpgrade(Upgrade upgrade)
