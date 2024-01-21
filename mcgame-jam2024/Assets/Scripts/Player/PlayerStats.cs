@@ -57,7 +57,7 @@ public class PlayerStats : MonoBehaviour
     public void Heal(float amount)
     {
         currentHealth += amount;
-        healthBar.setHealth(currentHealth);
+        healthBar.SetHealth(currentHealth);
         Debug.Log("Player healed to:" + currentHealth);
     }
 

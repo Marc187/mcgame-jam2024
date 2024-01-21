@@ -1768,6 +1768,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 7a0949f91a69f4812802a3306f390620, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7a0949f91a69f4812802a3306f390620, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 5f0d0697e63604e33a38fc12d4fd83c1, type: 2}
@@ -3541,7 +3545,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7801430037503812292, guid: bed0d60b57e02d946aac2b3b7bdbe08c, type: 3}
       propertyPath: angleMinVerticale
-      value: -20
+      value: -80
       objectReference: {fileID: 0}
     - target: {fileID: 8043484464541994512, guid: bed0d60b57e02d946aac2b3b7bdbe08c, type: 3}
       propertyPath: m_fontAsset

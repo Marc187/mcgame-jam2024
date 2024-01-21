@@ -43,7 +43,7 @@ public class UpgradeCardManager : MonoBehaviour
             case "health":
                 if (upgrade.effect.type == "custom")
                 {
-
+                    playerStats.Heal(upgrade.effect.value);
                 }
                 else
                 {
