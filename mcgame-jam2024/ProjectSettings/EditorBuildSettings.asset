@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenuEric.unity
     guid: 88115dc6aeae5f247af8910d7399b610
   - enabled: 1
-    path: Assets/Scenes/UISceneEric.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/PrincipalSceneCog.unity
+    guid: c1d8f74475ef4394f8c6d7e20bfcd418
+  - enabled: 1
+    path: Assets/Scenes/DeathMenu.unity
+    guid: 5046d15af499d0e4c9ef598a48f59e6c
   m_configObjects: {}
