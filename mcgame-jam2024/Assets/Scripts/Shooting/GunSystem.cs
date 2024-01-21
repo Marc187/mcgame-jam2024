@@ -26,6 +26,9 @@ public class GunSystem : MonoBehaviour
     public TextMeshProUGUI text;
 
     public AudioSource shootSound;
+    public AudioSource reloadSound;
+
+    //public Animation anim;
 
     private void Awake()
     {
@@ -54,6 +57,9 @@ public class GunSystem : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading)
         {
+            var sound = Instantiate(reloadSound);
+            reloadSound.Play();
+            //anim.Play();
             Reload();
         }
 
