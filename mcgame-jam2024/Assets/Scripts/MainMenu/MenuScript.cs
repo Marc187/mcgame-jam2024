@@ -12,10 +12,4 @@ public class MenuScript : MonoBehaviour
     {
         Application.Quit();
     }
-
-    public void Respawn()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-        Cursor.visible = false;
-    }
 }

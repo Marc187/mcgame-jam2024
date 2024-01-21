@@ -1,9 +1,8 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
-    public float initialSpeed = 20f;
+    public float initialSpeed = 5f;
     private float currentSpeed;
     private float maxSpeed = 50f;
 
@@ -15,8 +14,6 @@ public class PlayerStats : MonoBehaviour
     private float currentDamage;
 
     public HealthBar healthBar;
-    public ControleurPersonnage controller;
-    public GunSystem gunSystem;
 
     private void Start()
     {
@@ -24,16 +21,9 @@ public class PlayerStats : MonoBehaviour
         currentSpeed = initialSpeed;
         currentHealth = initialHealth;
         currentDamage = initialDamage;
-
         maxHealth = initialHealth;
         healthBar.SetMaxHealth(currentHealth);
         healthBar.SetInitialHealth(currentHealth);
-
-        controller.vitesseMarche = initialSpeed;
-        controller.vitesseCourse = initialSpeed;
-
-        gunSystem.damage = (int) initialDamage;
-
     }
 
     // Increase Section

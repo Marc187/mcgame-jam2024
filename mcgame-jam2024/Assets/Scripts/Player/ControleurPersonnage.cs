@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ControleurPersonnage : MonoBehaviour
 {
-    public float vitesseMarche;         //Vitesse de déplacement vers l'avant
-    public float vitesseCourse;                     // vitesse de course du personnage
+    public float vitesseMarche = 4f;             //Vitesse de déplacement vers l'avant
+    public float vitesseCourse  = 8f;                       // vitesse de course du personnage
     public bool tourneAvecLeClavier = true;
     public int vitesseRotation = 1;               //Vitesse de rotation du prsonnage
     public float ForceSaut = 6f;            //Vitesse de saut du prsonnage
