@@ -2759,7 +2759,8 @@ PrefabInstance:
       value: Environnement
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3538466964976819966, guid: 6cc58dc54f23feb4fae1ca4ea869c083, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4543127127313911348, guid: 6cc58dc54f23feb4fae1ca4ea869c083, type: 3}
@@ -4397,6 +4398,14 @@ PrefabInstance:
     - target: {fileID: 7799540614459019226, guid: bed0d60b57e02d946aac2b3b7bdbe08c, type: 3}
       propertyPath: m_LocalPosition.z
       value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 7801430037503812292, guid: bed0d60b57e02d946aac2b3b7bdbe08c, type: 3}
+      propertyPath: angleMaxVerticale
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 7801430037503812292, guid: bed0d60b57e02d946aac2b3b7bdbe08c, type: 3}
+      propertyPath: angleMinVerticale
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 8043484464541994512, guid: bed0d60b57e02d946aac2b3b7bdbe08c, type: 3}
       propertyPath: m_fontAsset
