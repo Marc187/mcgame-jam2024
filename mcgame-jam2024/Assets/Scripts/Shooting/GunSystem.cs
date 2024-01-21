@@ -24,6 +24,9 @@ public class GunSystem : MonoBehaviour
     public float camShakeMagnitude, camShakeDuration;
     public TextMeshProUGUI text;
 
+    public AudioSource shootSound;
+    public AudioSource reloadSound;
+
     private void Awake()
     {
         bulletsLeft = magazineSize;
@@ -86,7 +89,10 @@ public class GunSystem : MonoBehaviour
 
         // Camera Shake
         //StartCoroutine(camShake.Shake(camShakeDuration, camShakeMagnitude));
-
+        var sound1 = Instantiate(shootSound);
+        sound1.enabled = true;
+        sound1.Play();
+        Destroy(sound1, sound1.clip.length);
         // Graphics
         Instantiate(muzzleFlash, rayHit.point, Quaternion.Euler(0, 180, 0));
         Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
@@ -110,6 +116,10 @@ public class GunSystem : MonoBehaviour
     private void Reload()
     {
         reloading = true;
+        var sound1 = Instantiate(reloadSound);
+        sound1.enabled = true;
+        sound1.Play();
+        Destroy(sound1, sound1.clip.length);
         Invoke("ReloadFinished", reloadTime);
     }
 
